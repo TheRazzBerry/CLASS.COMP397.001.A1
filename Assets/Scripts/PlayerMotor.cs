@@ -43,9 +43,6 @@ public class PlayerMotor : MonoBehaviour
 
         // Process Gravity
         controller.Move(playerVelocity * Time.deltaTime);
-
-        // Debug Logs
-        Debug.Log(playerVelocity.y);
     }
 
     public void Jump()
