@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +17,7 @@ public class InputManager : MonoBehaviour
         look = GetComponent<PlayerLook>();
 
         general.Jump.performed += ctx => motor.Jump();
+        general.Sprint.performed += ctx => motor.Sprint();
     }
 
     void FixedUpdate()
