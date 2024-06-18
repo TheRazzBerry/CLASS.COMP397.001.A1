@@ -244,6 +244,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba56970bd7192f4a96d0c3b4e2fa0e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &115126338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115126339}
+  m_Layer: 0
+  m_Name: Doors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &115126339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115126338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1776735429}
+  m_Father: {fileID: 1357810379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &132012955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1993945539938015635, guid: 5e3dd971f047c174a8a12a50cb8b55fe, type: 3}
@@ -506,7 +538,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1638488013}
-  - {fileID: 1776735429}
   m_Father: {fileID: 1592094265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &706249030
@@ -578,6 +609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SwitchB
       objectReference: {fileID: 0}
+    - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
+      propertyPath: linkedDoor
+      value: 
+      objectReference: {fileID: 1776735428}
     - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
       propertyPath: promptMessage
       value: Left Switch
@@ -1038,6 +1073,10 @@ PrefabInstance:
       value: SwitchC
       objectReference: {fileID: 0}
     - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
+      propertyPath: linkedDoor
+      value: 
+      objectReference: {fileID: 1776735428}
+    - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
       propertyPath: promptMessage
       value: Right Button
       objectReference: {fileID: 0}
@@ -1157,6 +1196,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1475013299}
+  - {fileID: 115126339}
   m_Father: {fileID: 1592094265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1363108048
@@ -1678,7 +1718,7 @@ GameObject:
   - component: {fileID: 1776735432}
   - component: {fileID: 1776735431}
   - component: {fileID: 1776735430}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ExitDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1693,12 +1733,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776735428}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -45, y: 3, z: 0}
   m_LocalScale: {x: 0.4, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 701034717}
+  m_Father: {fileID: 115126339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1776735430
 MonoBehaviour:
@@ -1716,7 +1756,7 @@ MonoBehaviour:
   SwitchA: {fileID: 934032510}
   SwitchB: {fileID: 62494612}
   SwitchC: {fileID: 533536534}
-  Door: {fileID: 1776735428}
+  exitDoor: {fileID: 0}
   isUnlocked: 0
 --- !u!65 &1776735431
 BoxCollider:
@@ -2328,6 +2368,10 @@ PrefabInstance:
       propertyPath: isSwitched
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
+      propertyPath: linkedDoor
+      value: 
+      objectReference: {fileID: 1776735428}
     - target: {fileID: 1450805339084374780, guid: ca2b1ad3efc8b5046a393eeca68aac07, type: 3}
       propertyPath: promptMessage
       value: Middle Switch
